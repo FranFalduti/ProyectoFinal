@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Tuluka Web</title>
+    <link rel="stylesheet" href="proyectoFinalFrancoFalduti.css">
+    <script src="proyectoFinalFrancoFalduti.js"></script>
+</head>
+
+<body>
+    <div class="Barra_principal">
+        <div id="inicioSesion">
+            Iniciar Sesion
+            <input id = "document" type="number" placeholder="DNI">
+            <input id = "contrasenia" type="text" placeholder="Contraseña">
+            <button onclick="inicioSesion()">Log In</button>
+        </div>
+
+        <nav class="navigationBar">
+            <div class="logo">
+                <img src="https://tulukatucuman.turnosweb.com/dominios/tulukatucuman/img/logo.jpg?31614950267">
+            </div>
+            <ul>
+                <li><a href="#id_actividades"> ACTIVIDADES </a></li>
+                <li><a href="#"> SEDES </a></li>
+                <li><a href="#id_inscripciones"> INSCRIPCIONES </a></li>
+                <li><a href="#"> RESERVAS </a></li>
+                <li><a href="#"> CONTACTO </a></li>
+            </ul>
+        </nav>
+    </div>
+
+        <div class="mainContent">
+            <div class="actividades" id="id_actividades">
+                <h1>Actividades</h1>
+                    <div class="crossfit">
+                        <h3>Crossfit</h3>   
+                        <p>Una disciplina...</p>
+                    </div>
+                    <div class="functional">
+                        <h3>Functional</h3>   
+                        <p>Tu cuerpo define...</p>
+                    </div>
+                    <div class="cardio">
+                        <h3>Cardio</h3>   
+                        <p>Si de fuerza se trata...</p>
+                    </div>
+                    <div class="home">
+                        <h3>Home</h3>   
+                        <p>Por la pandemia...</p>
+                    </div>
+            </div>
+
+            <div class="sedes" id="sedes">
+                <div class="row">
+                    <h1>Las sedes de Tuluka</h1>   
+                        <div class="box-s">
+                            <img src="" />
+                            <h3> Sede Almagro </h3>
+                            <p> Medrano 966 </p>
+                        </div>
+                        <div class="box-s">
+                            <img src="" />
+                            <h3> Sede Caballito </h3>
+                            <p> Bogota 70 </p>
+                        </div>
+                        <div class="box-s">
+                            <img src="" />
+                            <h3> Sede Obras Paraguay SC </h3>
+                            <p> Paraguay 2060 </p>
+                        </div>
+                        <div class="box-s">
+                            <img src="" />
+                            <h3> Sede Nuñez </h3>
+                            <p> Av. del Libertador 8176 </p>
+                        </div>
+                        <div class="box-s">
+                            <img src="" />
+                            <h3> Sede Palermo </h3>
+                            <p> Honduras 5962 </p>
+                        </div>
+                </div>
+			</div>
+        </div>
+
+        <div class="inscripciones" id="inscripciones">
+         
+            <form id="formulario">
+                <br><label for="fname">Nombre:</label><br>
+                    <input type="text" name="name" value=""><br>
+                <label for="lname">Apellido:</label><br>
+                    <input type="text" name="lname" value=""><br>
+                <label for="contraseña">Contraseña:</label><br>
+                    <input type="password" name="password" value=""><br>
+                <label for="age">Edad:</label><br>
+                    <input type="number" name="age" value=""><br>
+                <label for="document">DNI:</label><br>
+                    <input type="number" name="doc" value=""><br>
+                <label for="adress">Dirección:</label><br>
+                    <input type="text" name="adress" value=""><br>
+                
+                <br><input type="submit" value="Deseo inscribirme">
+            
+            </form>
+
+            <div id="output"> </div>
+
+        </div>
+
+            <div class="reservas">
+                <form id="reserva" class="reserva">
+                    <label for="doc">DNI:</label><br>
+                    <input type="number" id="doc" name="doc" value=""><br>
+                    <label for="sede">Sede:</label><br>
+                    <select id="sede" name="sede">
+                      <option value="almagro">Almagro</option>
+                      <option value="palermo">Palermo</option>
+                      <option value="Oparaguay">Obras Paraguay</option>
+                      <option value="caballito">Caballito</option>
+                      <option value="nuniez">Nuñez</option>
+                    </select><br>
+                    <label for="day">Día:</label><br>
+                    <input type="date" id="day" name="day" value=""><br>
+                    <label for="time">Horario:</label><br>
+                    <input type="time" id="time" name="time" value=""><br>
+
+                    <input type="submit" value="Reservar">
+
+                </form>
+            </div>
+
+
+            <div class="contacto">
+                <form id="contacto" class="container">
+                    <label for="fname">Nombre</label><br>
+                    <input type="text" id="fname" name="firstname" placeholder="Tu nombre..."><br>
+                
+                    <label for="lname">Apellido</label><br>
+                    <input type="text" id="lname" name="lastname" placeholder="Tu apellido..."><br>
+                
+                    <label for="document">Mail</label><br>
+                    <input type="text" id="mail" name="mail" placeholder="Tu mail..."><br>
+                
+                    <label for="subject">Asunto</label><br>
+                    <textarea id="subject" name="subject" placeholder="Desarrolle su consulta..." style="height:100px"></textarea><br>
+                
+                    <input type="submit" value="Submit">
+                  </form>
+            </div>
+
+            <div id="contactout"> </div>
+        <footer class="footer"></footer>
+  
+</body>
+
+</html>

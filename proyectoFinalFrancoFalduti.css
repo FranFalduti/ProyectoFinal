@@ -1,0 +1,77 @@
+* {
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Roboto;
+	font-size: 16px;
+    /*background: darkred;*/
+}
+
+.body { 
+	top: 0px;
+	left: 0px;
+	width: 1366px;
+	height: 100px;
+	position: absolute;
+
+}
+
+ul {
+    display: flex;
+	flex-direction: row;
+	align-items: center;
+    padding: 1em;
+}
+
+/*Form de reservas*/
+.reservas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.reserva {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+.reserva label input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+
+/*Form de contacto*/
+.contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+.container label input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
