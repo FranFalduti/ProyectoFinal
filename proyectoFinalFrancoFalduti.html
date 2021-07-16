@@ -9,7 +9,7 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Tuluka Web</title>
     <link rel="stylesheet" href="proyectoFinalFrancoFalduti.css">
-    <script src="proyectoFinalFrancoFalduti.js"></script>
+
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             Iniciar Sesion
             <input id = "document" type="number" placeholder="DNI">
             <input id = "contrasenia" type="text" placeholder="Contraseña">
-            <button onclick="inicioSesion()">Log In</button>
+            <button onclick="logIn()">Log In</button>
         </div>
 
         <nav class="navigationBar">
@@ -113,7 +113,7 @@
         </div>
 
             <div class="reservas">
-                <form id="reserva" class="reserva">
+                <form id="reserva" class="reserva" style="display: none;">
                     <label for="doc">DNI:</label><br>
                     <input type="number" id="doc" name="doc" value=""><br>
                     <label for="sede">Sede:</label><br>
@@ -136,7 +136,7 @@
 
 
             <div class="contacto">
-                <form id="contacto" class="container">
+                <form id="contacto" class="container" style="display: none;">
                     <label for="fname">Nombre</label><br>
                     <input type="text" id="fname" name="firstname" placeholder="Tu nombre..."><br>
                 
@@ -156,6 +156,9 @@
             <div id="contactout"> </div>
         <footer class="footer"></footer>
   
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="proyectoFinalFrancoFalduti.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 //Inicio de sesión
 
-function inicioSesion() {
+function inicioSesion(inicioExitoso) {
     let usuario = document.getElementById("document").value;
     let contrasenia = document.getElementById("contrasenia").value;
     let registros = JSON.parse(localStorage.getItem("REGISTROS"));
@@ -12,14 +12,27 @@ function inicioSesion() {
             let i = document.createElement("h1");
             i.innerText = "Bienvenido";
             document.getElementById("inicioSesion").appendChild(i);
+
+            inicioExitoso();
+            
+
         }
         else {
             console.log("Error");
         }
     }  
+
+
 }    
 
+//Función que hace que se muestren los formularios de Contacto y Reserva
 
+function logIn() {
+    inicioSesion(() => {
+        document.getElementById("reserva").style.display = "block";
+        document.getElementById("contacto").style.display = "block";
+    });
+}
 
 
 
@@ -91,4 +104,3 @@ function validarContacto(intern) {
 
     document.getElementById("contactout").innerHTML=`Muchas gracias ${nombre} ${apellido} por ponerse en contacto con nosotros. Estaremos respondiéndole lo antes posible.`;
 }
-
