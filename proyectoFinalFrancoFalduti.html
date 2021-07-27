@@ -2,160 +2,178 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <title>Tuluka Web</title>
-    <link rel="stylesheet" href="proyectoFinalFrancoFalduti.css">
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gimnasio</title>
+    <link rel="stylesheet" href="proyectoFinalFrancoFalduti.css" />
 </head>
 
 <body>
-    <div class="Barra_principal">
-        <div id="inicioSesion">
-            Iniciar Sesion
-            <input id = "document" type="number" placeholder="DNI">
-            <input id = "contrasenia" type="text" placeholder="Contraseña">
-            <button onclick="logIn()">Log In</button>
+    <div class="barraPrincipal">
+        <div class="logo">
+            <img src="logo-02.png">
         </div>
-
         <nav class="navigationBar">
-            <div class="logo">
-                <img src="https://tulukatucuman.turnosweb.com/dominios/tulukatucuman/img/logo.jpg?31614950267">
-            </div>
             <ul>
-                <li><a href="#id_actividades"> ACTIVIDADES </a></li>
-                <li><a href="#"> SEDES </a></li>
-                <li><a href="#id_inscripciones"> INSCRIPCIONES </a></li>
-                <li><a href="#"> RESERVAS </a></li>
-                <li><a href="#"> CONTACTO </a></li>
+                <li><a href="#actividades" class="categoria"> ACTIVIDADES </a></li>
+                <li id="inscripcionesid"><a href="#inscripciones" class="categoria"> INSCRIPCIONES </a></li>
+                <li id="reservaid" style="display: none;"><a href="#reserva" class="categoria"> RESERVAS </a></li>
+                <li><a href="#contacto" class="categoria"> CONTACTO </a></li>
+                <li><a href="#id_iniciosesion" class="categoria"> INGRESAR </a></li>
             </ul>
         </nav>
     </div>
 
-        <div class="mainContent">
-            <div class="actividades" id="id_actividades">
-                <h1>Actividades</h1>
-                    <div class="crossfit">
-                        <h3>Crossfit</h3>   
-                        <p>Una disciplina...</p>
-                    </div>
-                    <div class="functional">
-                        <h3>Functional</h3>   
-                        <p>Tu cuerpo define...</p>
-                    </div>
-                    <div class="cardio">
-                        <h3>Cardio</h3>   
-                        <p>Si de fuerza se trata...</p>
-                    </div>
-                    <div class="home">
-                        <h3>Home</h3>   
-                        <p>Por la pandemia...</p>
-                    </div>
+    <div class="slider">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://www.crossfit.com/wp-content/uploads/2020/10/19092755/2018072814475780_ND_ND5_6593-1-copy-1920x1080.jpg"
+                    style="width: 100%" />
+                <div class="text">Crossfit</div>
             </div>
 
-            <div class="sedes" id="sedes">
-                <div class="row">
-                    <h1>Las sedes de Tuluka</h1>   
-                        <div class="box-s">
-                            <img src="" />
-                            <h3> Sede Almagro </h3>
-                            <p> Medrano 966 </p>
-                        </div>
-                        <div class="box-s">
-                            <img src="" />
-                            <h3> Sede Caballito </h3>
-                            <p> Bogota 70 </p>
-                        </div>
-                        <div class="box-s">
-                            <img src="" />
-                            <h3> Sede Obras Paraguay SC </h3>
-                            <p> Paraguay 2060 </p>
-                        </div>
-                        <div class="box-s">
-                            <img src="" />
-                            <h3> Sede Nuñez </h3>
-                            <p> Av. del Libertador 8176 </p>
-                        </div>
-                        <div class="box-s">
-                            <img src="" />
-                            <h3> Sede Palermo </h3>
-                            <p> Honduras 5962 </p>
-                        </div>
-                </div>
-			</div>
+            <div class="mySlides fade">
+                <img src="https://negociosyconvenciones.com/wp-content/uploads/2019/07/Functional-Strength-Training.jpg"
+                    style="width: 100%" />
+                <div class="text">Functional</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-with-towel-around-neck-riding-high-res-stock-photography-948025940-1554790775.jpg"
+                    style="width: 100%" />
+                <div class="text">Cardio</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-watching-sports-training-online-on-laptop-royalty-free-image-1584717965.jpg"
+                    style="width: 100%" />
+                <div class="text">Home</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br />
 
-        <div class="inscripciones" id="inscripciones">
-         
-            <form id="formulario">
-                <br><label for="fname">Nombre:</label><br>
-                    <input type="text" name="name" value=""><br>
-                <label for="lname">Apellido:</label><br>
-                    <input type="text" name="lname" value=""><br>
-                <label for="contraseña">Contraseña:</label><br>
-                    <input type="password" name="password" value=""><br>
-                <label for="age">Edad:</label><br>
-                    <input type="number" name="age" value=""><br>
-                <label for="document">DNI:</label><br>
-                    <input type="number" name="doc" value=""><br>
-                <label for="adress">Dirección:</label><br>
-                    <input type="text" name="adress" value=""><br>
-                
-                <br><input type="submit" value="Deseo inscribirme">
-            
-            </form>
-
-            <div id="output"> </div>
-
+        <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
+    </div>
 
-            <div class="reservas">
-                <form id="reserva" class="reserva" style="display: none;">
-                    <label for="doc">DNI:</label><br>
-                    <input type="number" id="doc" name="doc" value=""><br>
-                    <label for="sede">Sede:</label><br>
-                    <select id="sede" name="sede">
-                      <option value="almagro">Almagro</option>
-                      <option value="palermo">Palermo</option>
-                      <option value="Oparaguay">Obras Paraguay</option>
-                      <option value="caballito">Caballito</option>
-                      <option value="nuniez">Nuñez</option>
-                    </select><br>
-                    <label for="day">Día:</label><br>
-                    <input type="date" id="day" name="day" value=""><br>
-                    <label for="time">Horario:</label><br>
-                    <input type="time" id="time" name="time" value=""><br>
-
-                    <input type="submit" value="Reservar">
-
-                </form>
+    <div class="informacion" id="actividades">
+        <div class="crossfit">
+            <div class="crossfitpic">
+                <img src="https://www.crossfit.com/wp-content/uploads/2020/10/19092755/2018072814475780_ND_ND5_6593-1-copy-1920x1080.jpg"/>
             </div>
-
-
-            <div class="contacto">
-                <form id="contacto" class="container" style="display: none;">
-                    <label for="fname">Nombre</label><br>
-                    <input type="text" id="fname" name="firstname" placeholder="Tu nombre..."><br>
-                
-                    <label for="lname">Apellido</label><br>
-                    <input type="text" id="lname" name="lastname" placeholder="Tu apellido..."><br>
-                
-                    <label for="document">Mail</label><br>
-                    <input type="text" id="mail" name="mail" placeholder="Tu mail..."><br>
-                
-                    <label for="subject">Asunto</label><br>
-                    <textarea id="subject" name="subject" placeholder="Desarrolle su consulta..." style="height:100px"></textarea><br>
-                
-                    <input type="submit" value="Submit">
-                  </form>
+            <div class="crossfittext">
+                <h2>Crossfit</h2>
+                <p>Alta intensidad, fuerza y resistencia. El entrenamiento de las fuerzas militares estadounidenses requiere de todo esto y mucho más. Si estás buscando un desafío constante, entonces no lo dudes y anotate en crossfit.</p>
             </div>
+        </div>
+        <div class="functional">
+            <div class="functionalpic">
+                <img src="https://negociosyconvenciones.com/wp-content/uploads/2019/07/Functional-Strength-Training.jpg"/>
+            </div>
+            <div class="functionaltext">
+                <h2>Functional</h2>
+                <p>¿Queres ir a tu ritmo, escuchando a tu cuerpo y cómo te sentís? Entonces Functional es para vos. Disciplina que al ser sencilla, adaptable y entretenida te va a generar los mejores momentos.</p>
+            </div>
+        </div>
+        <div class="cardio">
+            <div class="cardiopic">    
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-with-towel-around-neck-riding-high-res-stock-photography-948025940-1554790775.jpg"/>
+            </div>
+            <div class="cardiotext">
+                <h2>Cardio</h2>
+                <p>Si estás buscando algo que te permita tener más resistencia, esta es tu actividad. Al repartir el esfuerzo físico durante los ejercicios con una intensidad moderada, vas a lograr los mejores resultados.</p>
+            </div>
+        </div>
+        <div class="home">
+            <div class="homepic">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-watching-sports-training-online-on-laptop-royalty-free-image-1584717965.jpg"/>
+            </div>
+            <div class="hometext">
+                <h2>Home</h2>
+                <p>Por la pandemia, el entrenamiento en el gimnasio se volvió complicado y riesgoso. Es por eso que decidimos habilitar esta opción para que puedas entrenar con lo que tengas en tu casa como si estuvieras en la nuestra.</p>
+            </div>
+        </div>
+    </div>
 
-            <div id="contactout"> </div>
-        <footer class="footer"></footer>
-  
+    <div class="inscripciones" id="inscripciones">
+        <form id="formulario">
+            <br /><label for="fname">Nombre:</label><br />
+            <input type="text" name="name" value="" /><br />
+            <label for="lname">Apellido:</label><br />
+            <input type="text" name="lname" value="" /><br />
+            <label for="contraseña">Contraseña:</label><br />
+            <input type="password" name="password" value="" /><br />
+            <label for="age">Edad:</label><br />
+            <input type="number" name="age" value="" /><br />
+            <label for="document">DNI:</label><br />
+            <input type="number" name="doc" value="" /><br />
+            <label for="adress">Mail:</label><br />
+            <input type="email" name="Mail" value="" /><br />
+
+            <br /><input type="submit" value="Deseo inscribirme" />
+        </form>
+
+        <div id="output"></div>
+    </div>
+
+    <div class="reservas">
+        <form id="reserva" class="reserva" style="display: none">
+            <label for="doc">DNI:</label><br />
+            <input type="number" id="doc" name="doc" value="" /><br />
+            <label for="sede">Sede:</label><br />
+            <select id="sede" name="sede">
+                <option value="almagro">Almagro</option>
+                <option value="palermo">Palermo</option>
+                <option value="Oparaguay">Obras Paraguay</option>
+                <option value="caballito">Caballito</option>
+                <option value="nuniez">Nuñez</option>
+            </select><br />
+            <label for="day">Día:</label><br />
+            <input type="date" id="day" name="day" value="" /><br />
+            <label for="time">Horario:</label><br />
+            <input type="time" id="time" name="time" value="" /><br />
+
+            <input type="submit" value="Reservar" />
+        </form>
+    </div>
+
+    <div class="contacto">
+         <form id="contacto" class="container" style="display: show">
+            <label for="fname">Nombre</label><br />
+            <input type="text" id="fname" name="firstname" placeholder="Tu nombre..." /><br />
+
+            <label for="lname">Apellido</label><br />
+            <input type="text" id="lname" name="lastname" placeholder="Tu apellido..." /><br />
+
+            <label for="document">Mail</label><br />
+            <input type="text" id="mail" name="mail" placeholder="Tu mail..." /><br />
+
+            <label for="subject">Asunto</label><br />
+            <textarea id="subject" name="subject" placeholder="Desarrolle su consulta..." class="textarea"></textarea><br />
+
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <div id="contactout"></div>
+
+    <div id="inicioSesion" class="inicioSesion">
+        <input id="document" type="number" placeholder="DNI" class="inputlogin"/>
+        <input id="contrasenia" type="text" placeholder="Contraseña" class="inputlogin"/>
+        <button onclick="logIn()" class="submitlogin">Ingresar</button>
+    </div>
+
+
+
+    <footer class="footer"></footer>
 
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="proyectoFinalFrancoFalduti.js"></script>
