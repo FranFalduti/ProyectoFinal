@@ -10,14 +10,12 @@ img {vertical-align: middle;}
 
 .logo {
     width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    float: left;
 }
 
 .logo img {
-    width: 8%;
-    margin: 1em 0em 0em 3em;
+  width: 12%;
+  margin: 1em 0em 1em 3em;
 }
 
 .inputlogin {
@@ -45,31 +43,26 @@ img {vertical-align: middle;}
 /* Menu */
 .barraPrincipal {
 	background: darkblue 0% 0% no-repeat padding-box;
-	box-shadow: 0px 3px 6px #00000026;
+	box-shadow: 1px 5px 6px #00000026;
 	opacity: 1;
 	position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
 }
 
 .navigationBar {
 	background: var(--fondo-header) 0% 0% no-repeat padding-box;
 	box-shadow: 0px 3px 6px #00000026;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	
 }
 
 .navigationBar ul {
 	display: flex;
-	flex-direction: row;
 	list-style: none;
 	width: 60%;
 	justify-content: space-around;
-	padding: 0.5em;
-
+	padding: 1em;
 }
 
 .navigationBar li {
@@ -236,13 +229,99 @@ img {vertical-align: middle;}
   font-weight: bold;
 }
 
+/*Form de inscripción y de reserva*/
+.inscripciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./Resources/fondocrossfit.jpg);
+  width: 100%;
+  background-size: 100%;
+}
+
+.formulario {
+  border-radius: 5px;
+  padding: 20px;
+  min-width: 40em;
+}
+
+.formulario label input {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.formulario label {
+  color: white;
+  font-size: 2em;
+  font-family: ui-monospace;
+}
+
+.formulario input {
+height: 2em;
+font-size: 1em;
+width: 100%;
+}
+
+/*Form de reservas*/
+.reservas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./Resources/fondocrossfit.jpg);
+  width: 100%;
+  background-size: 100%;
+}
+
+.reserva {
+  border-radius: 5px;
+  padding: 20px;
+  min-width: 40em;
+}
+
+.reserva label input {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.reserva select {
+  font-size: 1.5em;
+  font-family: ui-monospace;
+}
+
+.reserva label {
+  color: white;
+  font-size: 2em;
+  font-family: ui-monospace;
+}
+
+.reserva input {
+height: 2em;
+font-size: 1em;
+width: 100%;
+}
+
+
 
 /*Form de contacto*/
 .contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(./Resources/fondocrossfit.jpg);
+    background: white;
     width: 100%;
     background-size: 100%;
 }
@@ -266,7 +345,7 @@ img {vertical-align: middle;}
 }
 
 .container label {
-    color: white;
+    color: black;
     font-size: 2em;
     font-family: ui-monospace;
 }
@@ -283,19 +362,92 @@ img {vertical-align: middle;}
   resize: none;
 }
 
-
-/*Inicio Sesión*/
-.inicioSesion {
+/*Footer*/
+.footer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding-right: 1em;
-  padding-top: 1em;
-  width: 48em;
-  align-items: center;
+  width: 100%;
+  background-color: #2444ad;
+  text-align: center;
+  font-family: initial;
+  color: white;
+}
+.footer a {
+  color: red;
 }
 
 
+
+
+/*Inicio Sesión*/
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: rgb(63, 107, 156);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=number], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=number]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
 
 
 

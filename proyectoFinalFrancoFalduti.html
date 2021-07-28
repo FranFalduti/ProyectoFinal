@@ -5,12 +5,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>gimnasio</title>
+    <title>Gimnasio | Mucho más que entrenar</title>
     <link rel="stylesheet" href="proyectoFinalFrancoFalduti.css" />
 </head>
 
 <body>
-    <div class="barraPrincipal">
+    <div class="barraPrincipal" id="barraPrincipal">
         <div class="logo">
             <img src="./Resources/logo-02.png">
         </div>
@@ -20,7 +20,9 @@
                 <li id="inscripcionesid"><a href="#inscripciones" class="categoria"> INSCRIPCIONES </a></li>
                 <li id="reservaid" style="display: none;"><a href="#reserva" class="categoria"> RESERVAS </a></li>
                 <li><a href="#contacto" class="categoria"> CONTACTO </a></li>
-                <li><a href="#id_iniciosesion" class="categoria"> INGRESAR </a></li>
+                <!--<li><a href="#id_iniciosesion" class="categoria"> INGRESAR </a></li>-->
+                <!-- <li><button onclick="login()" class="submitlogin">Ingresar</button></li> -->
+
             </ul>
         </nav>
     </div>
@@ -104,12 +106,12 @@
     </div>
 
     <div class="inscripciones" id="inscripciones">
-        <form id="formulario">
+        <form id="formulario" class="formulario">
             <br /><label for="fname">Nombre:</label><br />
             <input type="text" name="name" value="" /><br />
             <label for="lname">Apellido:</label><br />
             <input type="text" name="lname" value="" /><br />
-            <label for="contraseña">Contraseña:</label><br />
+            <label for="contrasenia">Contraseña:</label><br />
             <input type="password" name="password" value="" /><br />
             <label for="age">Edad:</label><br />
             <input type="number" name="age" value="" /><br />
@@ -124,7 +126,7 @@
         <div id="output"></div>
     </div>
 
-    <div class="reservas">
+    <div class="reservas" id="reservascontainer">
         <form id="reserva" class="reserva" style="display: none">
             <label for="doc">DNI:</label><br />
             <input type="number" id="doc" name="doc" value="" /><br />
@@ -141,7 +143,8 @@
             <label for="time">Horario:</label><br />
             <input type="time" id="time" name="time" value="" /><br />
 
-            <input type="submit" value="Reservar" />
+            <input type="submit" value="Reservar" onclick="reservarAhora(event)" />
+            
         </form>
     </div>
 
@@ -165,18 +168,38 @@
 
     <div id="contactout"></div>
 
-    <div id="inicioSesion" class="inicioSesion">
+      <button class="open-button" onclick="formaAbierta()" id="botoningresar">Ingresar</button>
+
+      <div class="popup" class="iniciosesion" id="inicioSesion">
+        <form class="form-container">
+          <h1 id="cabecerapopup">Ingresa los datos</h1>
+      
+          <label for="dni"><b>DNI</b></label>
+          <input type="number" placeholder="DNI" name="email" id="document" required>
+      
+          <label for="psw"><b>Contraseña</b></label>
+          <input type="password" placeholder="Contraseña" name="psw" id="contrasenia" required>
+      
+          <button type="submit" class="btn" onclick="logIn(event)">Ingresar</button>
+          <button type="button" class="btn cancel" onclick="formaCerrada()">Cerrar</button>
+        </form>
+      </div>
+
+    <!-- <div id="inicioSesion" class="inicioSesion">
         <input id="document" type="number" placeholder="DNI" class="inputlogin"/>
         <input id="contrasenia" type="text" placeholder="Contraseña" class="inputlogin"/>
         <button onclick="logIn()" class="submitlogin">Ingresar</button>
-    </div>
+    </div> -->
 
 
+    <footer class="footer">
+        <p>Autor: Franco Falduti</p>
+        <p>Todos los derechos reservados</p>
+     </footer>
 
-    <footer class="footer"></footer>
 
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="proyectoFinalFrancoFalduti.js"></script>
+    <script src="./proyectoFinalFrancoFalduti.js"></script>
 </body>
 
 </html>

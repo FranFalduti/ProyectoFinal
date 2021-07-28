@@ -1,3 +1,5 @@
+var usuarioLogueado = false;
+
 //Inicio de sesión
 function inicioSesion(inicioExitoso) {
     let usuario = document.getElementById("document").value;
@@ -6,9 +8,7 @@ function inicioSesion(inicioExitoso) {
 
     for (let u of registros) {
         if(u.dni == usuario && u.contrasenia == contrasenia) {
-            let i = document.createElement("h1");
-            i.innerText = "Bienvenido";
-            document.getElementById("inicioSesion").appendChild(i);
+            document.getElementById("cabecerapopup").innerHTML="Bienvenido";
 
             return inicioExitoso();
         }
@@ -16,17 +16,42 @@ function inicioSesion(inicioExitoso) {
     console.log("Error");  
 }    
 
+//Validación de reserva
+
+function reservarAhora(e) {
+    e.preventDefault();
+
+    let dni = document.getElementById("doc").value;
+    let sede = document.getElementById("sede").value;
+    let day = document.getElementById("day").value;
+    let time = document.getElementById("time").value;
+
+
+    if(dni && sede && day && time) {
+        let h3 = document.createElement("h3");
+            h3.innerHTML="Reservado con éxito";
+            h3.style.fontSize="2em";
+            h3.style.color="#2444ad";
+            h3.style.textShadow="1px 1px white, \
+                                -1px 1px white, \
+                                1px -1px white, \
+                                -1px -1px white";
+        document.getElementById("reservascontainer").appendChild(h3);
+    }
+}
+
 
 //Función que hace que se muestren los formularios de Contacto y Reserva
-function logIn() {
+function logIn(e) {
+    e.preventDefault();
     inicioSesion(() => {
         $("#reserva").show();
         $("#inscripciones").hide();
         $("#inscripcionesid").hide();
         $("#reservaid").show();
+        usuarioLogueado = true;
     });
 }
-
 
 //Inscripcion de persona
 document.addEventListener("DOMContentLoaded",function(e){
@@ -145,6 +170,21 @@ function validarEmail(email) {
     })
 
 }
+
+//Inicio de sesión Pop-Up
+function formaAbierta() {
+    $(".popup").css("display", "block");
+  }
+  
+  function formaCerrada() {
+    $(".popup").css("display", "none");
+
+    if(usuarioLogueado) {
+        $("#botoningresar").fadeOut(100);
+    };
+  }
+
+//
 
 
 //Animación imágenes
