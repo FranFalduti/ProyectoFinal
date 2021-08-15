@@ -14,7 +14,7 @@ img {vertical-align: middle;}
 }
 
 .logo img {
-  width: 12%;
+  width: 5em;
   margin: 1em 0em 1em 3em;
 }
 
@@ -314,9 +314,7 @@ font-size: 1em;
 width: 100%;
 }
 
-
-
-/*Form de contacto*/
+/*Form y mensaje de contacto*/
 .contacto {
     display: flex;
     flex-direction: column;
@@ -324,6 +322,17 @@ width: 100%;
     background: white;
     width: 100%;
     background-size: 100%;
+}
+
+.contacto-mensaje {
+  padding: 20px 20px 0px 20px;
+}
+
+.contacto-mensaje p {
+  font-size: large;
+  font-weight: 500;
+  text-align: center;
+  text-decoration-line: underline;
 }
 
 .container {

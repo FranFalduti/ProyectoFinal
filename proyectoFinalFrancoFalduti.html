@@ -69,38 +69,49 @@
     <div class="informacion" id="actividades">
         <div class="crossfit">
             <div class="crossfitpic">
-                <img src="https://www.crossfit.com/wp-content/uploads/2020/10/19092755/2018072814475780_ND_ND5_6593-1-copy-1920x1080.jpg"/>
+                <img
+                    src="https://www.crossfit.com/wp-content/uploads/2020/10/19092755/2018072814475780_ND_ND5_6593-1-copy-1920x1080.jpg" />
             </div>
             <div class="crossfittext">
                 <h2>Crossfit</h2>
-                <p>Alta intensidad, fuerza y resistencia. El entrenamiento de las fuerzas militares estadounidenses requiere de todo esto y mucho más. Si estás buscando un desafío constante, entonces no lo dudes y anotate en crossfit.</p>
+                <p>Alta intensidad, fuerza y resistencia. El entrenamiento de las fuerzas militares estadounidenses
+                    requiere de todo esto y mucho más. Si estás buscando un desafío constante, entonces no lo dudes y
+                    anotate en crossfit.</p>
             </div>
         </div>
         <div class="functional">
             <div class="functionalpic">
-                <img src="https://negociosyconvenciones.com/wp-content/uploads/2019/07/Functional-Strength-Training.jpg"/>
+                <img
+                    src="https://negociosyconvenciones.com/wp-content/uploads/2019/07/Functional-Strength-Training.jpg" />
             </div>
             <div class="functionaltext">
                 <h2>Functional</h2>
-                <p>¿Queres ir a tu ritmo, escuchando a tu cuerpo y cómo te sentís? Entonces Functional es para vos. Disciplina que al ser sencilla, adaptable y entretenida te va a generar los mejores momentos.</p>
+                <p>¿Queres ir a tu ritmo, escuchando a tu cuerpo y cómo te sentís? Entonces Functional es para vos.
+                    Disciplina que al ser sencilla, adaptable y entretenida te va a generar los mejores momentos.</p>
             </div>
         </div>
         <div class="cardio">
-            <div class="cardiopic">    
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-with-towel-around-neck-riding-high-res-stock-photography-948025940-1554790775.jpg"/>
+            <div class="cardiopic">
+                <img
+                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-with-towel-around-neck-riding-high-res-stock-photography-948025940-1554790775.jpg" />
             </div>
             <div class="cardiotext">
                 <h2>Cardio</h2>
-                <p>Si estás buscando algo que te permita tener más resistencia, esta es tu actividad. Al repartir el esfuerzo físico durante los ejercicios con una intensidad moderada, vas a lograr los mejores resultados.</p>
+                <p>Si estás buscando algo que te permita tener más resistencia, esta es tu actividad. Al repartir el
+                    esfuerzo físico durante los ejercicios con una intensidad moderada, vas a lograr los mejores
+                    resultados.</p>
             </div>
         </div>
         <div class="home">
             <div class="homepic">
-                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-watching-sports-training-online-on-laptop-royalty-free-image-1584717965.jpg"/>
+                <img
+                    src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/woman-watching-sports-training-online-on-laptop-royalty-free-image-1584717965.jpg" />
             </div>
             <div class="hometext">
                 <h2>Home</h2>
-                <p>Por la pandemia, el entrenamiento en el gimnasio se volvió complicado y riesgoso. Es por eso que decidimos habilitar esta opción para que puedas entrenar con lo que tengas en tu casa como si estuvieras en la nuestra.</p>
+                <p>Por la pandemia, el entrenamiento en el gimnasio se volvió complicado y riesgoso. Es por eso que
+                    decidimos habilitar esta opción para que puedas entrenar con lo que tengas en tu casa como si
+                    estuvieras en la nuestra.</p>
             </div>
         </div>
     </div>
@@ -144,12 +155,15 @@
             <input type="time" id="time" name="time" value="" /><br />
 
             <input type="submit" value="Reservar" onclick="reservarAhora(event)" />
-            
+
         </form>
     </div>
 
     <div class="contacto">
-         <form id="contacto" class="container" style="display: show">
+        <div class="contacto-mensaje">
+            <p> Si tenés alguna duda o consulta, nos podés dejar un mensaje aquí y te responderemos a la brevedad. </p>
+        </div>
+        <form id="contacto" class="container" style="display: show">
             <label for="fname">Nombre</label><br />
             <input type="text" id="fname" name="firstname" placeholder="Tu nombre..." /><br />
 
@@ -160,7 +174,8 @@
             <input type="text" id="mail" name="mail" placeholder="Tu mail..." /><br />
 
             <label for="subject">Asunto</label><br />
-            <textarea id="subject" name="subject" placeholder="Desarrolle su consulta..." class="textarea"></textarea><br />
+            <textarea id="subject" name="subject" placeholder="Desarrolle su consulta..."
+                class="textarea"></textarea><br />
 
             <input type="submit" value="Submit" />
         </form>
@@ -168,34 +183,27 @@
 
     <div id="contactout"></div>
 
-      <button class="open-button" onclick="formaAbierta()" id="botoningresar">Ingresar</button>
+    <button class="open-button" onclick="formaAbierta()" id="botoningresar">Ingresar</button>
 
-      <div class="popup" class="iniciosesion" id="inicioSesion">
+    <div class="popup" class="iniciosesion" id="inicioSesion">
         <form class="form-container">
-          <h1 id="cabecerapopup">Ingresa los datos</h1>
-      
-          <label for="dni"><b>DNI</b></label>
-          <input type="number" placeholder="DNI" name="email" id="document" required>
-      
-          <label for="psw"><b>Contraseña</b></label>
-          <input type="password" placeholder="Contraseña" name="psw" id="contrasenia" required>
-      
-          <button type="submit" class="btn" onclick="logIn(event)">Ingresar</button>
-          <button type="button" class="btn cancel" onclick="formaCerrada()">Cerrar</button>
+            <h1 id="cabecerapopup">Ingresa los datos</h1>
+
+            <label for="dni"><b>DNI</b></label>
+            <input type="number" placeholder="DNI" name="email" id="document" required>
+
+            <label for="psw"><b>Contraseña</b></label>
+            <input type="password" placeholder="Contraseña" name="psw" id="contrasenia" required>
+
+            <button type="submit" class="btn" onclick="logIn(event)">Ingresar</button>
+            <button type="button" class="btn cancel" onclick="formaCerrada()">Cerrar</button>
         </form>
-      </div>
-
-    <!-- <div id="inicioSesion" class="inicioSesion">
-        <input id="document" type="number" placeholder="DNI" class="inputlogin"/>
-        <input id="contrasenia" type="text" placeholder="Contraseña" class="inputlogin"/>
-        <button onclick="logIn()" class="submitlogin">Ingresar</button>
-    </div> -->
-
+    </div>
 
     <footer class="footer">
         <p>Autor: Franco Falduti</p>
         <p>Todos los derechos reservados</p>
-     </footer>
+    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
